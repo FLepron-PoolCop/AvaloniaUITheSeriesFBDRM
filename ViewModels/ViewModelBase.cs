@@ -1,11 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using ReactiveUI;
+using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace AvaloniaUITheSeriesFBDRM.ViewModels
-{
-    public class ViewModelBase : ReactiveObject
-    {
-    }
-}
+namespace AvaloniaUITheSeriesFBDRM.ViewModels;
+
+public class ViewModelBase : ObservableObject { }

@@ -2,7 +2,6 @@ using System;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Logging;
-using Avalonia.ReactiveUI;
 using Avalonia.Controls;
 using Avalonia.Skia;
 using Avalonia.Dialogs;
@@ -37,6 +36,6 @@ class Program
             .UsePlatformDetect()
             .UseSkia()
             .LogToTrace()
-            .UseReactiveUI()
             .UseManagedSystemDialogs();
+
 }

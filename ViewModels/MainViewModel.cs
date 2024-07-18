@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -13,11 +13,11 @@ using CommunityToolkit.Mvvm.Messaging;
 
 namespace AvaloniaUITheSeriesFBDRM.ViewModels;
 
-public partial class MainWindowViewModel : ViewModelBase
+public partial class MainViewModel : ViewModelBase
 {
-    public MainWindowViewModel(IMessenger messenger)
+    public MainViewModel(IMessenger messenger)
     {
-        messenger.Register<MainWindowViewModel, LoginSuccessMessage>(this, (_, message) =>
+        messenger.Register<MainViewModel, LoginSuccessMessage>(this, (_, message) =>
         {
             CurrentPage = new SecretViewModel(message.Value);
         });
@@ -40,7 +40,7 @@ public partial class MainWindowViewModel : ViewModelBase
         new ListItemTemplate(typeof(ChartsPageViewModel), "PollRegular", "Charts"),
     ];
 
-    public MainWindowViewModel() : this(new WeakReferenceMessenger()) { }
+    public MainViewModel() : this(new WeakReferenceMessenger()) { }
 
     [ObservableProperty]
     private bool _isPaneOpen;

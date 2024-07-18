@@ -1,20 +1,15 @@
-<UserControl xmlns="https://github.com/avaloniaui"
+<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:AvaloniaUITheSeriesFBDRM.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="460"
+        xmlns:views="clr-namespace:AvaloniaUITheSeriesFBDRM.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="700"
         x:Class="AvaloniaUITheSeriesFBDRM.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel">
-
-    <Design.DataContext>
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-
-    <TextBlock 
-        Text="{Binding Greeting}"
-        FontSize="40"
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"/>
-
-</UserControl>
+        Icon="/Assets/logo_big_no_bg.ico"
+        Title="AvaloniaUITheSeriesFBDRM"
+        WindowStartupLocation="CenterScreen"
+        WindowState="FullScreen"
+        Width="1100"
+        Height="700">
+  <views:MainView />
+</Window>
