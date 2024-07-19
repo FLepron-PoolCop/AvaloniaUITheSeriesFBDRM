@@ -35,6 +35,7 @@ class Program
         => AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .UseSkia()
+            .WithInterFont()
             .LogToTrace()
             .UseManagedSystemDialogs();
 
