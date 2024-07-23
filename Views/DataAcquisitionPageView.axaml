@@ -1,0 +1,23 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:templates="clr-namespace:AvaloniaUITheSeriesFBDRM.Templates"
+             xmlns:viewModels="clr-namespace:AvaloniaUITheSeriesFBDRM.ViewModels.SplitViewPane"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="700"
+             x:Class="AvaloniaUITheSeriesFBDRM.Views.DataAcquisitionPageView"
+             x:DataType="viewModels:DataAcquisitionPageViewModel">
+
+    <Grid RowDefinitions="Auto,*">
+        <Button Content="Add a measure" Command="{Binding AddMeasurementCommand}" Grid.Row="0"/>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <DataGrid ItemsSource="{Binding Measurements}" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Type de Mesure" Binding="{Binding MeasurementType}" Width="*"/>
+                    <DataGridTextColumn Header="Valeur" Binding="{Binding Value}" Width="*"/>
+                    <DataGridTextColumn Header="Date et Heure" Binding="{Binding Timestamp}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -71,6 +71,7 @@ public partial class App : Application
 
     [Singleton(typeof(MainViewModel))]
     [Transient(typeof(HomePageViewModel))]
+    [Singleton(typeof(DataAcquisitionPageViewModel))]
     [Transient(typeof(ButtonPageViewModel))]
     [Transient(typeof(TextPageViewModel))]
     [Transient(typeof(ValueSelectionPageViewModel))]
@@ -86,6 +87,7 @@ public partial class App : Application
 
     [Singleton(typeof(MainWindow))]
     [Transient(typeof(HomePageView))]
+    [Singleton(typeof(DataAcquisitionPageViewModel))]
     [Transient(typeof(ButtonPageView))]
     [Transient(typeof(TextPageView))]
     [Transient(typeof(ValueSelectionPageView))]

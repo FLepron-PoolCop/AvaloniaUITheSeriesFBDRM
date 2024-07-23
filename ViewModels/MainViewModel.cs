@@ -29,13 +29,15 @@ public partial class MainViewModel : ViewModelBase
 
     private readonly List<ListItemTemplate> _templates =
     [
-        new ListItemTemplate(typeof(HomePageViewModel), "HomeRegular", "Home"),
+        new ListItemTemplate(typeof(HomePageViewModel), "HomeRegular", "Home"), //text_bullet_list_square_regular
+        new ListItemTemplate(typeof(DataAcquisitionPageViewModel), "TextColumnThreeRegular", "Data Acquisition"), //TextColumnThreeRegular
         new ListItemTemplate(typeof(ButtonPageViewModel), "CursorHoverRegular", "Buttons"),
         new ListItemTemplate(typeof(TextPageViewModel), "TextNumberFormatRegular", "Text"),
         new ListItemTemplate(typeof(ValueSelectionPageViewModel), "CalendarCheckmarkRegular", "Value Selection"),
         new ListItemTemplate(typeof(ImagePageViewModel), "ImageRegular", "Images"),
         new ListItemTemplate(typeof(GridPageViewModel), "GridRegular", "Grids"),
         new ListItemTemplate(typeof(DragAndDropPageViewModel), "TapDoubleRegular", "Drang And Drop"),
+        new ListItemTemplate(typeof(CustomSplashScreenViewModel), "BatSplashScreen", "Bat Splash Screen"),
         new ListItemTemplate(typeof(LoginPageViewModel), "LockRegular", "Login Form"),
         new ListItemTemplate(typeof(ChartsPageViewModel), "PollRegular", "Charts"),
     ];
