@@ -1,5 +1,6 @@
 using System;
 using Avalonia.Controls;
+using Avalonia.Markup.Xaml;
 using System.Collections.ObjectModel;
 using AvaloniaUITheSeriesFBDRM.ViewModels.SplitViewPane ;
 
@@ -10,8 +11,6 @@ public partial class DataAcquisitionPageView : UserControl
 {
     public DataAcquisitionPageView()
     {
-        InitializeComponent();
-
         DataContext = new DataAcquisitionPageViewModel
         {
             Measurements = new ObservableCollection<Measurement>
@@ -21,10 +20,12 @@ public partial class DataAcquisitionPageView : UserControl
                 new Measurement { MeasurementType = "Pression", Value = 1013.1, Timestamp = DateTime.Now }
             }
         };
+
+        InitializeComponent();
     }
 
-    // private void InitializeComponent()
-    // {
-    //     AvaloniaXamlLoader.Load(this);
-    // }
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
+    }
 }

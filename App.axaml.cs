@@ -78,7 +78,7 @@ public partial class App : Application
     [Transient(typeof(ImagePageViewModel))]
     [Singleton(typeof(GridPageViewModel))]
     [Singleton(typeof(DragAndDropPageViewModel))]
-    [Singleton(typeof(CustomSplashScreenViewModel))]
+    [Transient(typeof(CustomSplashScreenViewModel))]
     [Singleton(typeof(LoginPageViewModel))]
     [Singleton(typeof(SecretViewModel))]
     [Transient(typeof(ChartsPageViewModel))]
@@ -87,7 +87,7 @@ public partial class App : Application
 
     [Singleton(typeof(MainWindow))]
     [Transient(typeof(HomePageView))]
-    [Singleton(typeof(DataAcquisitionPageViewModel))]
+    [Singleton(typeof(DataAcquisitionPageView))]
     [Transient(typeof(ButtonPageView))]
     [Transient(typeof(TextPageView))]
     [Transient(typeof(ValueSelectionPageView))]

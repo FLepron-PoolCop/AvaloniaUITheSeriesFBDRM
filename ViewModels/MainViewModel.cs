@@ -37,7 +37,7 @@ public partial class MainViewModel : ViewModelBase
         new ListItemTemplate(typeof(ImagePageViewModel), "ImageRegular", "Images"),
         new ListItemTemplate(typeof(GridPageViewModel), "GridRegular", "Grids"),
         new ListItemTemplate(typeof(DragAndDropPageViewModel), "TapDoubleRegular", "Drang And Drop"),
-        new ListItemTemplate(typeof(CustomSplashScreenViewModel), "BatSplashScreen", "Bat Splash Screen"),
+        //new ListItemTemplate(typeof(CustomSplashScreenViewModel), "BatSplashScreen", "Bat Splash Screen"),
         new ListItemTemplate(typeof(LoginPageViewModel), "LockRegular", "Login Form"),
         new ListItemTemplate(typeof(ChartsPageViewModel), "PollRegular", "Charts"),
     ];

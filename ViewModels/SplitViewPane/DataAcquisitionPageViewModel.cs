@@ -11,7 +11,7 @@ public partial class DataAcquisitionPageViewModel : ViewModelBase {
     private ObservableCollection<Measurement>? _measurements;
 
     [RelayCommand]
-    private void AddMeasurementCommand()
+    private void AddMeasurement()
     {
         Measurements?.Add(new Measurement { MeasurementType = "Nouvelle Mesure", Value = 0.0, Timestamp = DateTime.Now });
     }
