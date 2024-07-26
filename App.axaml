@@ -13,6 +13,11 @@
         <FluentTheme />
         <StyleInclude Source="avares://AvaloniaUITheSeriesFBDRM/Assets/Icons.axaml" />
         <StyleInclude Source="avares://AvaloniaUITheSeriesFBDRM/Templates/ContentExample.axaml" />
+        <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
+        <Style Selector="ScrollBar:vertical">
+            <Setter Property="Width" Value="60"/>
+            <Setter Property="MinWidth" Value="60"/>
+        </Style>
     </Application.Styles>
 
 </Application>
