@@ -78,8 +78,8 @@
             "stopAtEntry": false,
             "console": "internalConsole",
             "env": {
-                //"AVALONIA_DRM": "true"
-                "AVALONIA_FB": "true"
+                "AVALONIA_DRM": "true"
+                //"AVALONIA_FB": "true"
             },
             "args": [],
             "pipeTransport": {

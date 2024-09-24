@@ -1,6 +1,7 @@
 using System;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
+//²using Avalonia.ReactiveUI;
 using Avalonia.Logging;
 using Avalonia.Controls;
 using Avalonia.Skia;
@@ -24,7 +25,7 @@ class Program
         } else if (Environment.GetEnvironmentVariable("AVALONIA_DRM") == "true") {
             // let's use the DRM with EGL
             // FIXME: the index of the /dev/dri/cardX is not always 1 (it's depending on the hardware)
-            return builder.StartLinuxDrm(args, "/dev/dri/card1", 1);
+            return builder.StartLinuxDrm(args, "/dev/dri/card0", 1);
         }
 
         throw new Exception("Please set AVALONIA_FB or AVALONIA_DRM environment variables to true");
@@ -35,8 +36,15 @@ class Program
         => AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .UseSkia()
-            .WithInterFont()
             .LogToTrace()
             .UseManagedSystemDialogs();
+
+        // => AppBuilder.Configure<App>()
+        //     .UsePlatformDetect()
+        //     .UseSkia()
+        //     .WithInterFont()
+        //     .UseReactiveUI()
+        //     .LogToTrace()
+        //     .UseManagedSystemDialogs();
 
 }
